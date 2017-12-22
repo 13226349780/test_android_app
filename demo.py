@@ -62,9 +62,59 @@ class ContactsAndroidTests(unittest.TestCase):
         seach2.click()
         seach2.send_keys('荒野行动')
         sleep(8)
-        hyxd = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.RelativeLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.TextView')
-        hyxd.click()
+
+        back = self.driver.find_element_by_id('com.qihoo360.mobilesafe.recommend:id/b7')
+        back.click()
+        sleep(2)
+        health = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager/android.widget.FrameLayout/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ListView/android.widget.LinearLayout[5]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button[2]')
+        health.click()
+        sleep(2)
+
+        #手机清理的简单测试
+        clean = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.RelativeLayout[4]/android.widget.GridView/android.widget.RelativeLayout[1]/android.widget.RelativeLayout')
+        clean.click()
+        sleep(2)
+
+        sleep(10)
+        laji = self.driver.find_element_by_id('com.qihoo360.mobilesafe.clean:id/common_btn_middle')
+        laji.click()
+        wc = self.driver.find_element_by_id('com.qihoo.appstore:id/bottom_btn')
+        wc.click()
+        sleep(2)
+        laji_back = self.driver.find_element_by_id('com.qihoo.appstore:id/btn_left')
+        laji_back.click()
+        sleep(1)
+            
+
+        clean_back = self.driver.find_element_by_id('com.qihoo360.mobilesafe.clean:id/common_img_back')
+        clean_back.click()
+        #clean_back.click()
         sleep(3)
+
+        #下载管理测试
+
+        down_ctrl = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.RelativeLayout[4]/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.RelativeLayout')
+        down_ctrl.click()
+        sleep(2)
+        self.driver.get_screenshot_as_file('down_picture.jpg')
+        down_back = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ImageView')
+        down_back.click()
+        sleep(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
 

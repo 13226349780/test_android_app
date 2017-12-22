@@ -32,8 +32,12 @@ class setting_tests(unittest.TestCase):
         self.driver.quit()
 
     def test_health(self):
-        health = self.driver.find_element_by_id('com.qihoo.appstore:id/clean_animation')
-        health.click()
+        sleep(7)
+        sett = self.driver.find_element_by_id('com.qihoo.appstore:id/tab_item_icon')
+        sett.click()
+        #health = self.driver.find_element_by_id('com.qihoo.appstore:id/clean_animation')
+        #health = self.driver.find_element_by_name('立即体检')
+        #health.click()
         sleep(10)
         done = self.driver.find_element_by_id('com.qihoo.appstore:id/btn_finish')
         done.click()
