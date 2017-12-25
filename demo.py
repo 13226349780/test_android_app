@@ -102,32 +102,6 @@ class ContactsAndroidTests(unittest.TestCase):
         sleep(2)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ContactsAndroidTests)
     unittest.TextTestRunner(verbosity=2).run(suite)
